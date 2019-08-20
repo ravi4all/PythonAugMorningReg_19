@@ -1,0 +1,18 @@
+Data Structures
+- Strings - Collection of words and character in a sequence
+- List	
+=> Collection of any type of data
+=> Represented by []
+
+- Tuples 
+=> Similar to list but cannot be modified/updated
+=> Represented by ()
+
+- Dictionary 
+=> Data Stored in key:value pair
+=> Represented by {key:value}
+
+- Sets and Frozen Sets 
+=> Collection of unique unordered data
+=> Represented by {}
+
