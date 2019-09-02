@@ -38,6 +38,10 @@ while True:
                 moveY = -1
                 moveX = 0
 
+        elif event.type == pygame.KEYUP:
+            moveX = 0
+            moveY = 0
+
     color = random.choice([red,black,color_1])
     screen.fill(white)
     pygame.draw.rect(screen,color,(x,y,50,50))
@@ -45,13 +49,22 @@ while True:
     x += moveX
     y +=  moveY
 
-    if x > width - 50:
-        moveX = -1
-    elif x < 0:
-        moveX = 1
-    elif y > height - 50:
-        moveY = -1
-    elif y < 0:
-        moveY = 1
+    # if x > width - 50:
+    #     moveX = -1
+    # elif x < 0:
+    #     moveX = 1
+    # elif y > height - 50:
+    #     moveY = -1
+    # elif y < 0:
+    #     moveY = 1
+
+    if x > width:
+        x = -50
+    elif x < -50:
+        x = width
+    elif y > height:
+        y = -50
+    elif y < -50:
+        y = height
 
     pygame.display.flip()
